@@ -121,4 +121,17 @@ int main() {
     // 20. isSameSize() fonksiyonunu test etme
     std::cout << "\n--- Size Comparison ---" << std::endl;
     std::cout << "Is rect1 same size as rect2? " << (isSameSize(rect1, rect2) ? "Yes" : "No") << std::endl;
-    std::cout << "Is rect1 same size as rect3? " << (isSameSize(rect1, rect3
+    std::cout << "Is rect1 same size as rect3? " << (isSameSize(rect1, rect3) ? "Yes" : "No") << std::endl;
+
+    // 21. ConstDemo testleri
+    std::cout << "\n--- ConstDemo Tests ---" << std::endl;
+    ConstDemo demo(10);
+    std::cout << "Initial Value (getValue): " << demo.getValue() << std::endl;
+    std::cout << "constGetDouble() result: " << demo.constGetDouble() << std::endl;
+    std::cout << "Value after constGetDouble (should be unchanged): " << demo.getValue() << std::endl;
+    
+    demo.doubleValue();
+    std::cout << "Value after doubleValue() call: " << demo.getValue() << std::endl;
+
+    return 0;
+}
